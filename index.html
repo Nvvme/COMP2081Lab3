@@ -6,8 +6,65 @@
 		<meta name="description" content="A CSS Grid challenge to test your new layout skills">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
-			/* Put styles for CSS Grid here for the Lab */
-			
+
+.container {
+max-width: 400px;
+    margin: 200px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        "branding advertising1 advertising1 advertising1 search"
+        "branding globalnav globalnav globalnav globalnav"
+        "localnav topstory topstory topstory advertising2"
+        "localnav globalnews nationalnews localnews advertising2"
+        "localnav globalnews nationalnews localnews marketinfo"
+        "footer footer footer footer footer";
+    gap: 0px;
+    border: 1px solid black;
+    transform: scale(1.4);
+
+}
+
+
+.item-a { 
+    grid-area: branding; 
+    background-color: #d99898;
+}
+.item-b { grid-area: globalnav; background-color: #f1c1a5; }
+.item-c { 
+    grid-area: localnav; 
+    background-color: #c5b1d5;
+}
+.item-d { grid-area: footer; background-color: #f7e7a2; }
+.item-e { grid-area: topstory; background-color: #c8b191; }
+.item-f { grid-area: globalnews; background-color: #d29abf; }
+.item-g { grid-area: nationalnews; background-color: #f1b28c; }
+.item-h { grid-area: localnews; background-color: #9ed1d8; }
+.item-i { grid-area: search; background-color: #c8d3e7; }
+.item-j { grid-area: marketinfo; background-color: #8d7419; }
+.item-k { grid-area: advertising1; background-color: #b3d6a1; }
+.item-l { 
+    grid-area: advertising2; 
+    background-color: #b3d6a1;
+}
+    .item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px 5px 20px;
+        border: 1px solid black;
+    }
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 0;
+    text-align: left;
+}
+
 		</style>
 	</head>
 	<body>
